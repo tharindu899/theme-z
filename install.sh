@@ -12,7 +12,7 @@ function error_exit {
 }
 
 # Set Up Storage
-termux-setup-storage -y
+termux-setup-storage
 
 # pkgs
 apt update && apt upgrade -y
