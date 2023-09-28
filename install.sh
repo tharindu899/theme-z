@@ -168,7 +168,7 @@ echo -e "\n${GREEN}Installing Zsh Plugins${NC}"
     cd $HOME
     git clone https://github.com/tharindu899/x-theme
     mv ~/x-theme/font.ttf ~/.termux
-    rm -rf x-theme
+    rm -rf ~/x-theme
     #wget https://raw.githubusercontent.com/rooted-cyber/good/master/zsh/font.ttf
     printf "\n   💠 ${GREEN}Successfully downloaded font.ttf${NC}\n"
   else
