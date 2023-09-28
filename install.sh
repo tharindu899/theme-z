@@ -278,5 +278,5 @@ cd $PREFIX/bin
 
 # last printf
   #clear
-  printf "\n\n\033[0;33m   Now you can use\033[0m:- \033[0;31m zsh2\033[0m\n"
-  printf "  \033[0;33m Now you can use to create alias\033[0m:- \033[0;31m add\033[0m\n"
+  #printf "\n\n\033[0;33m   Now you can use\033[0m:- \033[0;31m zsh2\033[0m\n"
+  #printf "  \033[0;33m Now you can use to create alias\033[0m:- \033[0;31m add\033[0m\n"
