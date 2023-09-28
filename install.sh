@@ -175,16 +175,6 @@ echo -e "\n${GREEN}Installing Zsh Plugins${NC}"
     printf "\n   💠 ${RED}already exists font.ttf${NC}\n"
   fi
 
-# add 
-  cd ~/.termux
-  if [ ! -e add.sh ]; then
-    printf "\n   💠 ${YELLOW}Downloading add.sh${NC}\n\n"
-    wget https://raw.githubusercontent.com/tharindu899/addon/main/termux/zsh/add.sh
-    printf "\n   💠 ${GREEN}Successfully downloaded add.sh${NC}\n"
-  else
-    printf "\n   💠 ${RED}already exists add.sh${NC}\n"
-  fi
-
 # etc
   cd $PREFIX/etc
   if [ -e motd1 ]; then
