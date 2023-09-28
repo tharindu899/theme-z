@@ -20,6 +20,8 @@ apt update && apt install nala -y
 nala install zsh python wget gh python-pip luarocks luajit ripgrep fd gettext neovim nodejs git micro openssh zip curl ruby timewarrior taskwarrior htop figlet logo-ls lsd -y || error_exit "${RED}Failed to install packages.${NC}"
 
 # Install pynvim, pnpm and neovim npm package, and neovim gem package
+echo -e "\n   📌 ${GREEN}install gems update${NC}\n"
+gem update --system || error_exit "${RED}Failed to update gem.${NC}"
 echo -e "\n   📌 ${GREEN}install gems${NC}\n"
 gem install lolcat || error_exit "${RED}Failed to install lolcat${NC}"
 echo -e "\n   📌 ${GREEN}install python-pip${NC}\n"
@@ -30,8 +32,6 @@ echo -e "\n   📌 ${GREEN}install gems neovim${NC}\n"
 gem install neovim || error_exit "${RED}Failed to install neovim gem package.${NC}"
 echo -e "\n   📌 ${GREEN}install npm fund${NC}\n"
 npm fund
-echo -e "\n   📌 ${GREEN}install gems update${NC}\n"
-gem update --system || error_exit "${RED}Failed to update gem.${NC}"
 clear
 # termux_theme
 # Install Oh My Zsh plugins
