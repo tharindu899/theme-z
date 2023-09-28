@@ -260,8 +260,8 @@ cd $PREFIX/bin
   chsh -s zsh
   
 # nvim install
-  cd $HOME/.config
-  if [ -e nvim ]; then
+  cd $HOME
+  if [ -e .config ]; then
     printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
     mv ~/.config/nvim ~/.config/nvim.bak
     mv ~/.local/share/nvim ~/.local/share/nvim.bak
