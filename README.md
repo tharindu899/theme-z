@@ -14,5 +14,5 @@
 ```bash
 apt update && apt upgrade
 apt install wget -y
-wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh | bash
+wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh | bash install.sh
 ```
