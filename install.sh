@@ -249,7 +249,7 @@ cd $PREFIX/bin
 # defult set zsh command
   chsh -s zsh
   
-# nvim install
+# AstroNvim install
   cd $HOME
   if [ -e .config ]; then
     printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
