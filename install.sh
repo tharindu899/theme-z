@@ -265,7 +265,7 @@ cd $PREFIX/bin
     printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
     mv ~/.config/nvim ~/.config/nvim.bak
     mv ~/.local/share/nvim ~/.local/share/nvim.bak
-    git clone --depth 1 https://github.com/AstroNvim/AstroNvim $env:LOCALAPPDATA\nvim
+    git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
     nvim
     printf "\n${GREEN} Successfully backup & Cloning${NC}\n\n"
   else
