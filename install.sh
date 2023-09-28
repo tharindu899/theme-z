@@ -16,7 +16,7 @@ termux-setup-storage -y
 
 # pkgs
 apt update && apt upgrade -y
-apt install nala -y
+apt update && apt install nala -y
 nala install python wget gh python-pip neovim nodejs git micro openssh zip curl ruby timewarrior taskwarrior htop figlet logo-ls lsd zsh -y || error_exit "${RED}Failed to install packages.${NC}"
 
 # Install pynvim, pnpm and neovim npm package, and neovim gem package
