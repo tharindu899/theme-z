@@ -24,10 +24,10 @@ echo -e "\n   📌 ${GREEN}install gems${NC}\n"
 gem install lolcat || error_exit "${RED}Failed to install lolcat${NC}"
 echo -e "\n   📌 ${GREEN}install python-pip${NC}\n"
 python -m pip install pynvim || error_exit "${RED}Failed to install pynvim.${NC}"
-#echo -e "\n   📌 ${GREEN}install pnpm neovim${NC}\n"
-#npm install -g pnpm neovim || error_exit "${RED}Failed to install neovim npm package.${NC}"
-#echo -e "\n   📌 ${GREEN}install gems neovim${NC}\n"
-#gem install neovim || error_exit "${RED}Failed to install neovim gem package.${NC}"
+echo -e "\n   📌 ${GREEN}install pnpm neovim${NC}\n"
+npm install -g pnpm neovim || error_exit "${RED}Failed to install neovim npm package.${NC}"
+echo -e "\n   📌 ${GREEN}install gems neovim${NC}\n"
+gem install neovim || error_exit "${RED}Failed to install neovim gem package.${NC}"
 #echo -e "\n   📌 ${GREEN}install npm fund${NC}\n"
 #npm fund
 echo -e "\n   📌 ${GREEN}install gems update${NC}\n"
@@ -275,8 +275,3 @@ cd $PREFIX/bin
     nvim
     printf "\n${GREEN} Cloning Successfully${NC}\n\n"
   fi
-
-# last printf
-  #clear
-  #printf "\n\n\033[0;33m   Now you can use\033[0m:- \033[0;31m zsh2\033[0m\n"
-  #printf "  \033[0;33m Now you can use to create alias\033[0m:- \033[0;31m add\033[0m\n"
