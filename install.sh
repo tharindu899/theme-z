@@ -229,6 +229,7 @@ echo -e "\n${GREEN}Installing Zsh Plugins${NC}"
     fi
     echo "#!colors colors.properties" >> colors.properties
     echo "background=#120321" >> colors.properties
+    printf "\n   💠 ${GREEN}Create Successfully${NC}\n\n"
   fi
 
 # exit_command  
