@@ -17,11 +17,11 @@ termux-setup-storage
 # pkgs
 apt update && apt upgrade -y
 apt update && apt install nala -y
-nala install zsh python wget gh python-pip lazygit luarocks luajit ripgrep fd gettext neovim nodejs git micro openssh zip curl ruby timewarrior taskwarrior htop figlet termux-api composer logo-ls lsd -y || error_exit "${RED}Failed to install packages.${NC}"
+nala install zsh python wget gh python-pip lazygit stylua luarocks luajit ripgrep fd gettext neovim nodejs git micro openssh zip curl ruby timewarrior taskwarrior htop figlet termux-api composer logo-ls lsd -y || error_exit "${RED}Failed to install packages.${NC}"
 nala install golang php rust openjdk-17 
 python -m ensurepip --default-pip
 apt-get install fish
-pkg install stylua
+#pkg install stylua 
 #cargo install stylua
 
 
