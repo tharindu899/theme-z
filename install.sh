@@ -224,7 +224,9 @@ echo -e "\n${GREEN}Installing Zsh Plugins${NC}"
   else
     printf "\n   💠 ${YELLOW}Create colour dir${NC}\n\n"
     mkdir colour
-    mv "colors.properties" "$HOME/.termux/colour/.colors.properties.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+    if [ -e colors.properties ]; then
+      mv "colors.properties" "$HOME/.termux/colour/.colors.properties.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+    fi
     echo "#!colors colors.properties" >> colors.properties
     echo "background=#120321" >> colors.properties
   fi
