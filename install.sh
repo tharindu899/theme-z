@@ -21,7 +21,8 @@ nala install zsh python wget gh python-pip lazygit luarocks luajit ripgrep fd ge
 nala install golang php rust openjdk-17 
 python -m ensurepip --default-pip
 apt-get install fish
-cargo install stylua
+pkg install stylua
+#cargo install stylua
 
 
 # font
