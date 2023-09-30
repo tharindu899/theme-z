@@ -19,6 +19,21 @@ apt update && apt upgrade -y
 apt update && apt install nala -y
 nala install zsh python wget gh python-pip luarocks luajit ripgrep fd gettext neovim nodejs git micro openssh zip curl ruby timewarrior taskwarrior htop figlet logo-ls lsd -y || error_exit "${RED}Failed to install packages.${NC}"
 
+# font
+  cd ~/.termux
+  if [ ! -e font.ttf ]; then
+    printf "\n   💠 ${YELLOW}Downloading font${NC}\n\n"
+    cd $HOME
+    git clone https://github.com/tharindu899/x-theme
+    mv ~/x-theme/font.ttf ~/.termux
+    rm -rf ~/x-theme
+    termux-reload-settings
+    #wget https://raw.githubusercontent.com/rooted-cyber/good/master/zsh/font.ttf
+    printf "\n   💠 ${GREEN}Successfully downloaded font.ttf${NC}\n"
+  else
+    printf "\n   💠 ${RED}already exists font.ttf${NC}\n"
+  fi
+  
 # Install pynvim, pnpm and neovim npm package, and neovim gem package
 echo -e "\n   📌 ${GREEN}install gems update${NC}\n"
 gem update --system || error_exit "${RED}Failed to update gem.${NC}"
@@ -159,20 +174,6 @@ echo -e "\n${GREEN}Installing Zsh Plugins${NC}"
     printf "\n   💠 ${GREEN}Successfully added banner${NC}\n"
   else
     printf "\n   💠 ${RED}already exists banner${NC}\n"
-  fi
-  
-# font
-  cd ~/.termux
-  if [ ! -e font.ttf ]; then
-    printf "\n   💠 ${YELLOW}Downloading font${NC}\n\n"
-    cd $HOME
-    git clone https://github.com/tharindu899/x-theme
-    mv ~/x-theme/font.ttf ~/.termux
-    rm -rf ~/x-theme
-    #wget https://raw.githubusercontent.com/rooted-cyber/good/master/zsh/font.ttf
-    printf "\n   💠 ${GREEN}Successfully downloaded font.ttf${NC}\n"
-  else
-    printf "\n   💠 ${RED}already exists font.ttf${NC}\n"
   fi
 
 # etc
