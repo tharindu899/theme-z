@@ -259,22 +259,28 @@ cd $PREFIX/bin
   
 # defult set zsh command
   chsh -s zsh
-  
-# AstroNvim install
+
+# Ask for confirmation
+read -p "This script will install AstroNvim. Do you want to continue? (y/N): " choice
+if [[ $choice =~ ^[Yy]$ ]]; then
+  # User chose to continue
   cd $HOME
   if [ -e .config ]; then
-    printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
+    printf "\n${YELLOW}Backing up nvim config & Cloning${NC}\n\n"
     mv ~/.config/nvim ~/.config/nvim.bak
     mv ~/.local/share/nvim ~/.local/share/nvim.bak
     git clone --depth 1 https://github.com/tharindu899/starter ~/.config/nvim
     nvim
-    printf "\n${GREEN} Successfully backup & Cloning${NC}\n\n"
+    printf "\n${GREEN}Successfully backed up & cloned${NC}\n\n"
   else
-    printf "\n${YELLOW} Cloning AstroNvim${NC}\n\n"  
+    printf "\n${YELLOW}Cloning AstroNvim${NC}\n\n"  
     cd $HOME
     mkdir .config
     git clone --depth 1 https://github.com/tharindu899/starter ~/.config/nvim
     nvim
-    printf "\n${GREEN} Cloning Successfully${NC}\n\n"
+    printf "\n${GREEN}Cloning Successfully${NC}\n\n"
   fi
-# 
+else
+  # User chose not to continue
+  printf "\n${YELLOW}Installation canceled.${NC}\n\n"
+fi
