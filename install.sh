@@ -261,18 +261,20 @@ cd $PREFIX/bin
   chsh -s zsh
   
 # AstroNvim install
-  # cd $HOME
-#   if [ -e .config ]; then
-#     printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
-#     mv ~/.config/nvim ~/.config/nvim.bak
-#     mv ~/.local/share/nvim ~/.local/share/nvim.bak
-#     git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-#     nvim
-#     printf "\n${GREEN} Successfully backup & Cloning${NC}\n\n"
-#   else
-#     printf "\n${YELLOW} Cloning AstroNvim${NC}\n\n"  
-#     cd $HOME
-#     git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-#     nvim
-#     printf "\n${GREEN} Cloning Successfully${NC}\n\n"
-#   fi
+  cd $HOME
+  if [ -e .config ]; then
+    printf "\n${YELLOW} backup nvim config & Cloning${NC}\n\n"
+    mv ~/.config/nvim ~/.config/nvim.bak
+    mv ~/.local/share/nvim ~/.local/share/nvim.bak
+    git clone --depth 1 https://github.com/tharindu899/starter ~/.config/nvim
+    nvim
+    printf "\n${GREEN} Successfully backup & Cloning${NC}\n\n"
+  else
+    printf "\n${YELLOW} Cloning AstroNvim${NC}\n\n"  
+    cd $HOME
+    mkdir .config
+    git clone --depth 1 https://github.com/tharindu899/starter ~/.config/nvim
+    nvim
+    printf "\n${GREEN} Cloning Successfully${NC}\n\n"
+  fi
+# 
