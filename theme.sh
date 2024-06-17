@@ -1,13 +1,12 @@
 #pkg
-pkg install nala -y
-nala install git -y
+pkg install nala git -y
 
 cd $HOME
 git clone https://github.com/tharindu899/x-theme
 mv ~/x-theme/font.ttf ~/.termux
 rm -rf ~/x-theme
 termux-reload-settings
-
+clear
 nala install zsh python wget gh python-pip git micro openssh zip curl figlet logo-ls lsd -y
 
 # colour
