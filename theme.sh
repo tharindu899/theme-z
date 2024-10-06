@@ -179,6 +179,10 @@ cd $PREFIX/bin
 
 # acode-X sever
   echo -e "${YELLOW}acode-X installServer${NC}"
+  pkg install x11-repo -y
+  pkg install python nodejs -y
+  npm i -g acodex-server
+  pkg install tigervnc -y
   curl -sL https://raw.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
   # shortcurs_command
  cd $PREFIX/bin
