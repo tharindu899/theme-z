@@ -1,4 +1,8 @@
 #pkg
+cd $PREFIX/etc/apt
+   rm -rf sources.list
+   echo "deb https://packages.termux.dev/apt/termux-main stable main" >> sources.list
+   
 pkg install nala git -y
 
 cd $HOME
@@ -182,7 +186,7 @@ cd $PREFIX/bin
   curl -sL https://raw.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
   # shortcurs_command
  cd $PREFIX/bin
-  rm -rf add
+  rm -rf ax
   echo "#!/data/data/com.termux/files/usr/bin/sh" >> ax
   echo "acodeX-server" >> ax
   chmod 777 ax
