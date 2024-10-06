@@ -175,11 +175,7 @@ termux-reload-settings
 
 
 # exit_command  
-cd $PREFIX/bin
-  rm -rf e
-  echo "#!/data/data/com.termux/files/usr/bin/sh" >> e
-  echo "exit" >> e
-  chmod 777 e
+  echo "alias e='exit'" >> cd ~/.zshrc
 
 # acode-X sever
   echo -e "${YELLOW}acode-X installServer${NC}"
