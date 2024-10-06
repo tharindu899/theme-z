@@ -1,8 +1,4 @@
 #pkg
-cd $PREFIX/etc/apt
-   rm -rf sources.list
-   echo "deb https://packages-cf.termux.dev/apt/termux-main stable main" >> sources.list
-   
 apt install nala git -y
 
 cd $HOME
