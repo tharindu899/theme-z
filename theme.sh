@@ -1,5 +1,5 @@
 #pkg
-apt install nala git -y
+apt install nala -y
 
 cd $HOME
 git clone https://github.com/tharindu899/x-theme
