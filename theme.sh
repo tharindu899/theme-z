@@ -1,9 +1,9 @@
-#pkg 
+#pkg
 cd $PREFIX/etc/apt
    rm -rf sources.list
    echo "deb https://packages.termux.dev/apt/termux-main stable main" >> sources.list
-     
-pkg install nala git -y
+   
+apt install nala git -y
 
 cd $HOME
 git clone https://github.com/tharindu899/x-theme
@@ -35,15 +35,14 @@ if [ -e .termux ]; then
   mv termux.properties termux.properties1
   printf "\n\n    💠 ${YELLOW}Downloading button file${NC}\n\n"
   wget https://raw.githubusercontent.com/tharindu899/addon/main/termux/zsh/termux.properties
-  termux-reload-settings
   printf "\n    💠 ${GREEN}Downloading complete${NC}"
 else
   mv termux.properties termux.properties1
   printf "\n\n    💠 ${YELLOW}Downloading button file${NC}\n\n"
   wget https://raw.githubusercontent.com/tharindu899/addon/main/termux/zsh/termux.properties
-  termux-reload-settings
 fi
 
+termux-reload-settings
 
 # banner
   cd $PREFIX/etc
@@ -176,7 +175,11 @@ fi
 
 
 # exit_command  
-  echo "alias e='exit'" >> ~/.zshrc
+cd $PREFIX/bin
+  rm -rf e
+  echo "#!/data/data/com.termux/files/usr/bin/sh" >> e
+  echo "killall -9 com.termux" >> e
+  chmod 777 e
 
 # acode-X sever
   echo -e "${YELLOW}acode-X installServer${NC}"
@@ -204,5 +207,4 @@ fi
   
 # defult set zsh command
   chsh -s zsh
-  termux-setup-storage
-  exit
+  e
