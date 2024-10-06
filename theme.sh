@@ -183,6 +183,7 @@ cd $PREFIX/bin
   pkg install python nodejs -y
   npm i -g acodex-server
   pkg install tigervnc -y
+  curl -sL https://ra(w.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
   curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
   # shortcurs_command
  cd $PREFIX/bin
