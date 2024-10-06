@@ -5,8 +5,8 @@
 ## install command
 
 ```bash
+ ]
  pkg update && pkg upgrade -y
- termux-change-repo
  pkg install git -y
  git clone https://github.com/tharindu899/theme-z && cd theme-z && bash theme.sh
 ```
