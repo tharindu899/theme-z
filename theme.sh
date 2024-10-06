@@ -175,7 +175,7 @@ termux-reload-settings
 
 
 # exit_command  
-  echo "alias e='exit'" >> cd ~/.zshrc
+  echo "alias e='exit'" >> ~/.zshrc
 
 # acode-X sever
   echo -e "${YELLOW}acode-X installServer${NC}"
