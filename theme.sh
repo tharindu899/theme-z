@@ -178,7 +178,7 @@ termux-reload-settings
 cd $PREFIX/bin
   rm -rf e
   echo "#!/data/data/com.termux/files/usr/bin/sh" >> e
-  echo "killall -9 com.termux" >> e
+  echo "exit" >> e
   chmod 777 e
 
 # acode-X sever
@@ -207,4 +207,4 @@ cd $PREFIX/bin
   
 # defult set zsh command
   chsh -s zsh
-  e
+  exit
