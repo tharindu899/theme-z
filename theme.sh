@@ -1,9 +1,10 @@
-#pkg   
-pkg install nala git -y
+#pkg 
 cd $PREFIX/etc/apt
    rm -rf sources.list
    echo "deb https://packages.termux.dev/apt/termux-main stable main" >> sources.list
-   
+     
+pkg install nala git -y
+
 cd $HOME
 git clone https://github.com/tharindu899/x-theme
 mv ~/x-theme/font.ttf ~/.termux
