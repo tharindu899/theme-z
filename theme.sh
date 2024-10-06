@@ -185,6 +185,7 @@ cd $PREFIX/bin
   pkg install tigervnc -y
   curl -sL https://raw.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
   curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
+  vncserver
   # shortcurs_command
  cd $PREFIX/bin
   rm -rf ax
