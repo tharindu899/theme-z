@@ -120,15 +120,14 @@ termux-reload-settings
   fi
 
 # Git Flow Completions
-  cd $HOME/.oh-my-zsh/plugins
-  if [ -e git-flow-completion ]; then
-    printf "\n   💠 ${RED}Already installed git-flow-completion${NC}\n"
-  else
-    printf "\n   💠 ${YELLOW}Cloning git-flow-completion${NC}\n\n"
-    cd $HOME/.oh-my-zsh/plugins
-    git clone https://github.com/bobthecow/git-flow-completion
-    printf "\n   💠 ${GREEN}Cloning successful git-flow-completion${NC}\n"
+  cd "$HOME/.oh-my-zsh/plugins" || exit
+  plugin="git-flow-completion"
+  spin22_exist "$HOME/.oh-my-zsh/plugins/$plugin" "$plugin exists"
+  if [ ! -d "$plugin" ]; then
+    git clone "https://github.com/bobthecow/$plugin" > /dev/null 2>&1 &
+    spin22 "Cloning $plugin" "Success" "Failed"
   fi
+
 
 # highlighting
   cd $PREFIX/etc
