@@ -171,27 +171,27 @@ termux-reload-settings
 
 
 # exit_command  
-cd $PREFIX/bin
-  rm -rf e
-  echo "#!/data/data/com.termux/files/usr/bin/sh" >> e
-  echo "killall -9 com.termux" >> e
-  chmod 777 e
+# cd $PREFIX/bin
+#   rm -rf e
+#   echo "#!/data/data/com.termux/files/usr/bin/sh" >> e
+#   echo "killall -9 com.termux" >> e
+#   chmod 777 e
 
-# acode-X sever
-  echo -e "${YELLOW}acode-X installServer${NC}"
-  pkg install x11-repo -y
-  pkg install python nodejs -y
-  npm i -g acodex-server
-  pkg install tigervnc -y
-  curl -sL https://raw.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
-  curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
-  vncserver
-  # shortcurs_command
- cd $PREFIX/bin
-  rm -rf ax
-  echo "#!/data/data/com.termux/files/usr/bin/sh" >> ax
-  echo "acodeX-server" >> ax
-  chmod 777 ax
+#acode-X sever
+#   echo -e "${YELLOW}acode-X installServer${NC}"
+#   pkg install x11-repo -y
+#   pkg install python nodejs -y
+#   npm i -g acodex-server
+#   pkg install tigervnc -y
+#   curl -sL https://raw.githubusercontent.com/bajrangCoder/acode-plugin-acodex/main/installServer.sh | bash
+#   curl -L https://raw.githubusercontent.com/bajrangCoder/websockify_rs/main/install.sh | bash
+#   vncserver
+#   # shortcurs_command
+#  cd $PREFIX/bin
+#   rm -rf ax
+#   echo "#!/data/data/com.termux/files/usr/bin/sh" >> ax
+#   echo "acodeX-server" >> ax
+#   chmod 777 ax
 
 # shortcurs_command
  cd $PREFIX/bin
