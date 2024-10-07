@@ -7,7 +7,7 @@ mv ~/x-theme/font.ttf ~/.termux
 rm -rf ~/x-theme
 termux-reload-settings
 clear
-apt install zsh bc python wget gh python-pip git micro openssh zip curl figlet logo-ls lsd -y
+nala install zsh bc python wget gh python-pip git micro openssh zip curl figlet logo-ls lsd -y
 
 # colour
 cd "$HOME/.termux" || exit
@@ -209,4 +209,4 @@ termux-reload-settings
   
 # defult set zsh command
   chsh -s zsh
-  e
+  exit
