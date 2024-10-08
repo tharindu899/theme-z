@@ -24,7 +24,7 @@ This script automates the setup of a customized Termux environment on Android, i
    cd YOUR_REPOSITORY_NAME
    ```
 
-2. <details> <summary><b>View Setup Script </b></summary>
+2. <details> <summary><b>View Setup Script ”EASY” </b></summary>
 
    -  <b>Create .sh folder</b>
        ```bash
