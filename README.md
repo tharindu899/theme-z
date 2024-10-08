@@ -16,9 +16,9 @@
 ```bash
 apt update && apt upgrade -y
 apt install wget -y
-wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh && bash ~/theme.sh
+wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh && bash ~/install.sh
 ```
-### Clean scrript
+### Clean script
 
 ```bash
 apt update && apt upgrade -y
