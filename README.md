@@ -27,4 +27,4 @@ wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean
 ```
 
 
-# THANKS FOR USING THIS
+## ❤️ THANKS FOR USING THIS! ❤️
