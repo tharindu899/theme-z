@@ -247,7 +247,7 @@ if [ -d nvim ]; then
 fi
 
 # Download and unzip the new nvim setup
-wget https://github.com/tharindu899/addon/blob/main/termux/nvimasro.zip -O nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
+wget https://github.com/tharindu899/addon/blob/main/termux/nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
 spin22 "Downloading nvim setup" "Success" "Failed"
 
 unzip ~/.config/nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
