@@ -23,6 +23,7 @@ wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh && ba
 ```bash
 apt update && apt upgrade -y
 apt install wget -y
+cd 
 wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean.sh && bash ~/clean.sh
 ```
 
