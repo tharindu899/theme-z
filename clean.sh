@@ -253,8 +253,6 @@ spin22 "Downloading nvim setup" "Success" "Failed"
 unzip ~/.config/nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
 mv ~/.config/nvimasro ~/.config/nvim > /dev/null 2>> "$ERROR_LOG"
 
-rm -rf ~/.config/nvimasro.zip
-
 # Create shortcut commands
 echo "#!/data/data/com.termux/files/usr/bin/sh" > "$PREFIX/bin/addecho"
 echo "bash ~/.termux/add.sh" >> "$PREFIX/bin/addecho"
@@ -268,5 +266,6 @@ chmod 777 "$PREFIX/bin/tpecho"
 chsh -s zsh
 # Clean up temporary file
 rm -rf ~/temp_art.txt
+rm -rf ~/.config/nvimasro.zip
 rm -rf ~/clean.sh
 exit
