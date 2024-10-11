@@ -249,7 +249,7 @@ wget https://github.com/tharindu899/addon/blob/main/termux/nvimasro.zip -O nvima
 spin22 "Downloading nvim setup" "Success" "Failed"
 
 unzip ~/.config/nvimasro.zip > /dev/null 2>> "$ERROR_LOG" && mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
-
+rm -rf ~/.config/nvimasro.zip
 
 # Create shortcut commands
 echo "#!/data/data/com.termux/files/usr/bin/sh" > "$PREFIX/bin/addecho"
