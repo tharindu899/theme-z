@@ -226,6 +226,27 @@ if [ ! -e "$HOME/.p10k.zsh" ]; then
     wget https://raw.githubusercontent.com/tharindu899/addon/main/termux/zsh/.p10k.zsh -O "$HOME/.p10k.zsh" > /dev/null 2>> "$ERROR_LOG" &
     spin22 "Downloading .p10k.zsh" "Success" "Failed"
 fi
+## Astronvim
+# Check if ~/.config directory exists, if not, create it
+if [ ! -d "$HOME/.config" ]; then
+    mkdir -p "$HOME/.config"
+    echo "Created ~/.config directory"
+fi
+
+cd ~/.config
+
+# Check if nvim exists, and move it to nvim.bak if it does
+if [ -d nvim ]; then
+    mv nvim nvim.bak
+    echo "Moved existing nvim to nvim.bak"
+fi
+
+# Download and unzip the new nvim setup
+wget https://github.com/tharindu899/addon/blob/main/termux/nvimasro.zip -O nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
+spin22 "Downloading nvim setup" "Success" "Failed"
+
+unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG" && mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
+
 
 # Create shortcut commands
 echo "#!/data/data/com.termux/files/usr/bin/sh" > "$PREFIX/bin/addecho"
