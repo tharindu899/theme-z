@@ -226,7 +226,10 @@ if [ ! -e "$HOME/.p10k.zsh" ]; then
     wget https://raw.githubusercontent.com/tharindu899/addon/main/termux/zsh/.p10k.zsh -O "$HOME/.p10k.zsh" > /dev/null 2>> "$ERROR_LOG" &
     spin22 "Downloading .p10k.zsh" "Success" "Failed"
 fi
+##------------------------------------//
 ## Astronvim
+apt update && yes | apt upgrade && apt update && apt install neovim lua-language-server luarocks stylua ripgrep lazygit yarn python python-pip ccls clang rust-analyzer git -y && pip install neovim && npm install -g neovim;-y > /dev/null 2>> "$ERROR_LOG" &
+spin22 "Installing additional packages" "Success" "Failed"
 # Check if ~/.config directory exists, if not, create it
 if [ ! -d "$HOME/.config" ]; then
     mkdir -p "$HOME/.config"
