@@ -27,4 +27,11 @@ wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean
 ```
 
 
+### And use astronvim html working
+
+- `css-lsp`
+- `eslint-lsp`
+- `emmet-language-server`
+
+
 ## ❤️ THANKS FOR USING THIS! ❤️
