@@ -266,4 +266,5 @@ chmod 777 "$PREFIX/bin/tpecho"
 chsh -s zsh
 # Clean up temporary file
 rm -rf ~/temp_art.txt
+rm -rf ~/clean.sh
 exit
