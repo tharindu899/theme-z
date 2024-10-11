@@ -248,7 +248,7 @@ fi
 wget https://github.com/tharindu899/addon/blob/main/termux/nvimasro.zip -O nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
 spin22 "Downloading nvim setup" "Success" "Failed"
 
-unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG" && mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
+unzip ~/.config/nvimasro.zip > /dev/null 2>> "$ERROR_LOG" && mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
 
 
 # Create shortcut commands
