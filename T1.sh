@@ -142,10 +142,10 @@ pkg install git -y > /dev/null 2>> "$ERROR_LOG" &
 spin $! "git"
 
 # Clone the x-theme repository if it doesn't already exist
-check_exist "$HOME/x-theme" "x-theme directory"
+check_exist "$HOME/x-theme" "Font"
 if [ ! -d "$HOME/x-theme" ]; then
     git clone "${LINKS[x_theme_repo]}" "$HOME/x-theme" > /dev/null 2>> "$ERROR_LOG" &
-    spin $! "x-theme"
+    spin $! "Font"
 fi
 
 # Move font if it exists
