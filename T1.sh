@@ -281,6 +281,7 @@ fi
 #cd ~/.config
 # Check if nvim exists, and move it to nvim.bak if it does
 if [ -d "$HOME/.config/nvim" ]; then
+    cd ~/.config
     mv nvim nvim.bak.$(date +%Y.%m.%d-%H:%M:%S)
     #spin $! "backup existing nvim"
 fi
