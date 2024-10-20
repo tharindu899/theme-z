@@ -226,15 +226,15 @@ for plugin in git-flow-completion zsh-completions zsh-history-substring-search; 
         case "$plugin" in
             "git-flow-completion")
                 git clone "${LINKS[git_flow_completion]}" "$plugin" > /dev/null 2>> "$ERROR_LOG" &
-                spin $! " $plugin"
+                spin $! "$plugin"
                 ;;
             "zsh-completions")
                 git clone "${LINKS[zsh_completions]}" "$plugin" > /dev/null 2>> "$ERROR_LOG" &
-                spin $! " $plugin"
+                spin $! "$plugin"
                 ;;
             "zsh-history-substring-search")
                 git clone "${LINKS[zsh_history_substring_search]}" "$plugin" > /dev/null 2>> "$ERROR_LOG" &
-                spin $! " $plugin"
+                spin $! "$plugin"
                 ;;
         esac
     fi
