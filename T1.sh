@@ -258,13 +258,13 @@ fi
 check_exist "$HOME/.zshrc" ".zshrc "
 if [ ! -e "$HOME/.zshrc" ]; then
     wget "${LINKS[.zshrc]}" -O "$HOME/.zshrc" > /dev/null 2>> "$ERROR_LOG" &
-    spin $! ".zshrc"
+    spin $! "zshrc"
 fi
 
 check_exist "$HOME/.p10k.zsh" ".p10k.zsh "
 if [ ! -e "$HOME/.p10k.zsh" ]; then
     wget "${LINKS[p10k_zsh]}" -O "$HOME/.p10k.zsh" > /dev/null 2>> "$ERROR_LOG" &
-    spin $! ".p10k.zsh"
+    spin $! "p10k.zsh"
 fi
 
 # Install additional packages for AstroNvim
