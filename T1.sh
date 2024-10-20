@@ -307,7 +307,7 @@ chmod 777 "$PREFIX/bin/tpecho"
 
 # Set zsh as the default shell
 chsh -s zsh
-
+cd ~
 # Clean up temporary files
 rm -rf ~/temp_art.txt
 rm -rf ~/.config/nvimasro.zip
