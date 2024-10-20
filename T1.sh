@@ -290,7 +290,9 @@ wget "${LINKS[nvimasro]}" -O nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
 spin $! "nvim setup"
 
 unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG"
-mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
+if [ -d "$HOME/.config/nvimasro"]; then
+    mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
+fi
 
 # Create shortcut commands
 echo "#!/data/data/com.termux/files/usr/bin/sh" > "$PREFIX/bin/addecho"
