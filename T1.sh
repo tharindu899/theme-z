@@ -290,7 +290,7 @@ fi
 cd ~/.config && wget "${LINKS[nvimasro]}" -O nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
 spin $! "nvim setup"
 
-unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG"
+cd ~/.config && unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG"
 if [ -d "$HOME/.config/nvimasro"]; then
     cd ~/.config
     mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
