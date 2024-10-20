@@ -121,17 +121,14 @@ echo -e "\n\n"
 echo -e "\e[1;33m[#] \e[31mIT WILL TAKE \e[34m(\e[32m20\e[30m-\e[32m30.min\e[34m)\e[31m INSTALLING \e[33m[#]\e[0m\n"
 #pkg install ncurses-utils -y > /dev/null 2>> "$ERROR_LOG" &
 #echo -e "\e[31mtput package\e"
-check_internet () {
 
-	echo -ne "\033[33m\r[*] \033[4;32mChecking Your Internet Connection... \e[0m"; 
-	(ping -c 3 google.com) &> /dev/null 2>&1
-    if [[ "$?" != 0 ]];then
-	    echo -ne "\033[31m\r[*] \033[4;32mPlease Check Your Internet Connection... \e[0m"; 
-	    sleep 1
-	    exit 0
-    fi
-}
-check_internet
+echo -e "\033[33m\r[*] \033[4;32mChecking Your Internet Connection... \e[0m"; 
+(ping -c 3 google.com) &> /dev/null 2>&1
+if [[ "$?" != 0 ]];then
+    echo -e "\033[31m\r[*] \033[4;32mPlease Check Your Internet Connection... \e[0m"; 
+    sleep 1
+    exit 0
+fi
 
 # Update and install necessary packages
 (apt-get update --yes && apt-get upgrade --yes) > /dev/null 2>> "$ERROR_LOG" &
