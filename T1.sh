@@ -292,6 +292,7 @@ spin $! "nvim setup"
 
 unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG"
 if [ -d "$HOME/.config/nvimasro"]; then
+    cd ~/.config
     mv nvimasro nvim > /dev/null 2>> "$ERROR_LOG"
 fi
 
