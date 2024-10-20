@@ -307,9 +307,10 @@ chsh -s zsh
 # Clean up temporary files
 rm -rf ~/temp_art.txt
 rm -rf ~/.config/nvimasro.zip
+
+
+
 termux-reload-settings
-
-
 echo -e "\n\e[32mSetup complete. Please restart your terminal or run 'zsh' to apply changes.\e[0m"
 
 exit
