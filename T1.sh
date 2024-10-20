@@ -285,7 +285,7 @@ if [ -d "$HOME/.config/nvim" ]; then
 fi
 
 # Download and unzip the new nvim setup
-cd ~/.config && wget "${LINKS[nvimasro]}" -O nvimasro.zip && unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG" &
+(cd ~/.config && wget "${LINKS[nvimasro]}" -O nvimasro.zip && unzip nvimasro.zip) > /dev/null 2>> "$ERROR_LOG" &
 spin $! "nvim setup"
 
 #cd ~/.config && unzip nvimasro.zip > /dev/null 2>> "$ERROR_LOG"
