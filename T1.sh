@@ -160,7 +160,7 @@ pkg install zsh bc python wget gh python-pip micro openssh zip curl figlet logo-
 spin $! "packages"
 
 # Setup color directory
-check_exist "$HOME/.termux/colour" "Color directory exists"
+check_exist "$HOME/.termux/colour" "Color directory"
 if [ ! -d "$HOME/.termux/colour" ]; then
     mkdir "$HOME/.termux/colour"
     if [ -e "$HOME/.termux/colors.properties" ]; then
