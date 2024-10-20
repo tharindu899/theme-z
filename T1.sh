@@ -129,6 +129,7 @@ if [[ "$?" != 0 ]];then
     sleep 1
     exit 0
 fi
+echo -e "\n\n" 
 
 # Update and install necessary packages
 (apt-get update --yes && apt-get upgrade --yes) > /dev/null 2>> "$ERROR_LOG" &
