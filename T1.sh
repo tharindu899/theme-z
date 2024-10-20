@@ -186,7 +186,7 @@ if [ ! -d "$PREFIX/etc/rxfetch" ]; then
 fi
 
 # Download zshrc
-check_exist "$PREFIX/etc/motd1" "motd1 exists"
+check_exist "$PREFIX/etc/motd1" "motd1 "
 if [ ! -e "$PREFIX/etc/motd1" ]; then
     if [ -e "$PREFIX/etc/motd" ]; then
         mv "$PREFIX/etc/motd" "$PREFIX/etc/motd1"
@@ -198,21 +198,21 @@ if [ ! -e "$PREFIX/etc/motd1" ]; then
 fi
 
 # Download add.sh
-check_exist "$HOME/.termux/add.sh" "add.sh exists"
+check_exist "$HOME/.termux/add.sh" "add.sh "
 if [ ! -e "$HOME/.termux/add.sh" ]; then
     wget "${LINKS[add_sh]}" -O "$HOME/.termux/add.sh" > /dev/null 2>> "$ERROR_LOG" &
     spin $! "add.sh"
 fi
 
 # Clone oh-my-zsh if it doesn't exist
-check_exist "$HOME/.oh-my-zsh" "oh-my-zsh exists"
+check_exist "$HOME/.oh-my-zsh" "oh-my-zsh "
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     git clone --depth 1 "${LINKS[oh_my_zsh]}" "$HOME/.oh-my-zsh" > /dev/null 2>> "$ERROR_LOG" &
     spin $! "oh-my-zsh"
 fi
 
 # Install powerlevel10k if it doesn't exist
-check_exist "$HOME/powerlevel10k" "powerlevel10k exists"
+check_exist "$HOME/powerlevel10k" "powerlevel10k "
 if [ ! -d "$HOME/powerlevel10k" ]; then
     git clone --depth 1 "${LINKS[powerlevel10k]}" "$HOME/powerlevel10k" > /dev/null 2>> "$ERROR_LOG" &
     spin $! "powerlevel10k"
@@ -221,7 +221,7 @@ fi
 # Ensure plugins are installed
 cd "$HOME/.oh-my-zsh/plugins" || exit 1
 for plugin in git-flow-completion zsh-completions zsh-history-substring-search; do
-    check_exist "$plugin" "$plugin exists"
+    check_exist "$plugin" "$plugin "
     if [ ! -d "$plugin" ]; then
         case "$plugin" in
             "git-flow-completion")
@@ -242,26 +242,26 @@ done
 
 # Install syntax-highlighting and autosuggestions
 mkdir -p "$PREFIX/etc/.plugin"
-check_exist "$PREFIX/etc/.plugin/zsh-syntax-highlighting" "syntax-highlighting exists"
+check_exist "$PREFIX/etc/.plugin/zsh-syntax-highlighting" "syntax-highlighting "
 if [ ! -d "$PREFIX/etc/.plugin/zsh-syntax-highlighting" ]; then
     git clone "${LINKS[zsh_syntax_highlighting]}" "$PREFIX/etc/.plugin/zsh-syntax-highlighting" > /dev/null 2>> "$ERROR_LOG" &
     spin $! "syntax-highlighting"
 fi
 
-check_exist "$PREFIX/etc/.plugin/zsh-autosuggestions" "autosuggestions exists"
+check_exist "$PREFIX/etc/.plugin/zsh-autosuggestions" "autosuggestions "
 if [ ! -d "$PREFIX/etc/.plugin/zsh-autosuggestions" ]; then
     git clone "${LINKS[zsh_autosuggestions]}" "$PREFIX/etc/.plugin/zsh-autosuggestions" > /dev/null 2>> "$ERROR_LOG" &
     spin $! "zsh-autosuggestions"
 fi
 
 # Download .zshrc and .p10k.zsh
-check_exist "$HOME/.zshrc" ".zshrc exists"
+check_exist "$HOME/.zshrc" ".zshrc "
 if [ ! -e "$HOME/.zshrc" ]; then
     wget "${LINKS[.zshrc]}" -O "$HOME/.zshrc" > /dev/null 2>> "$ERROR_LOG" &
     spin $! ".zshrc"
 fi
 
-check_exist "$HOME/.p10k.zsh" ".p10k.zsh exists"
+check_exist "$HOME/.p10k.zsh" ".p10k.zsh "
 if [ ! -e "$HOME/.p10k.zsh" ]; then
     wget "${LINKS[p10k_zsh]}" -O "$HOME/.p10k.zsh" > /dev/null 2>> "$ERROR_LOG" &
     spin $! ".p10k.zsh"
