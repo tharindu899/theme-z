@@ -177,6 +177,7 @@ if [ -e "$HOME/.termux/termux.properties" ]; then
 fi
 wget "${LINKS[termux_properties]}" -O "$HOME/.termux/termux.properties" > /dev/null 2>> "$ERROR_LOG" &
 spin $! "termux.properties"
+
 termux-reload-settings
 
 # Download rxfetch if it doesn't exist
@@ -312,10 +313,6 @@ cd ~
 # Clean up temporary files
 rm -rf ~/temp_art.txt
 rm -rf ~/.config/nvimasro.zip
-
-
-
-termux-reload-settings
 
 
 echo -e "\n\e[32mSetup complete. Please restart your terminal or run 'zsh' to apply changes.\e[0m"
