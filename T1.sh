@@ -150,8 +150,8 @@ fi
 if [ -f "$HOME/x-theme/font.ttf" ]; then
     mv "$HOME/x-theme/font.ttf" "$HOME/.termux"
     rm -rf "$HOME/x-theme"
-    termux-reload-settings
 fi
+termux-reload-settings
 # Install nala
 (apt-get install nala -y) > /dev/null 2>> "$ERROR_LOG" &
 spin $! "Installing nala"
