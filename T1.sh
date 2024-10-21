@@ -276,7 +276,7 @@ spin $! "packages for AstroNvim"
 #cd ~/.confi
 if [ ! -d "$HOME/.config" ]; then
     mkdir -p "$HOME/.config"
-    echo "Created ~/.config directory"
+    spin $! "Created ~/.config directory"
 fi
 
 #cd ~/.config
