@@ -5,30 +5,22 @@
 ## install command
 
 ```bash
- termux-change-repo
- pkg update && pkg upgrade -y
- pkg install git -y
- git clone https://github.com/tharindu899/theme-z && cd theme-z && bash theme.sh
+ termux-change-repo && pkg update && pkg upgrade -y && pkg install git -y && git clone https://github.com/tharindu899/theme-z && cd theme-z && bash theme.sh
 ```
 
 ### wget command
 
 ```bash
-apt update && apt upgrade -y
-apt install wget -y
-wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh && bash ~/install.sh
+ apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/tharindu899/theme-z/main/install.sh && bash ~/install.sh
 ```
 ### Clean script
 
 ```bash
-apt update && apt upgrade -y
-apt install wget -y
-cd 
-wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean.sh && bash ~/clean.sh
+ apt update && apt upgrade -y && apt install wget -y && cd && wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean.sh && bash ~/clean.sh
 ```
 
 ```bash
-apt update && apt upgrade -y && apt install wget -y && cd && wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/T1.sh && bash ~/T1.sh
+ apt update && apt upgrade -y && apt install wget -y && cd && wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/T1.sh && bash ~/T1.sh
 ```
 ### And use astronvim html working
 
