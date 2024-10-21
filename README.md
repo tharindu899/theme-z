@@ -28,10 +28,7 @@ wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/clean
 ```
 
 ```bash
-apt update && apt upgrade -y
-apt install wget -y
-cd 
-wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/T1.sh && bash ~/T1.sh
+apt update && apt upgrade -y && apt install wget -y && cd && wget https://raw.githubusercontent.com/tharindu899/theme-z/refs/heads/main/T1.sh && bash ~/T1.sh
 ```
 ### And use astronvim html working
 
