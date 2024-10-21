@@ -152,6 +152,9 @@ if [ -f "$HOME/x-theme/font.ttf" ]; then
     rm -rf "$HOME/x-theme"
     termux-reload-settings
 fi
+# Install nala
+(apt-get install nala -y) > /dev/null 2>> "$ERROR_LOG" &
+spin $! "Installing nala"
 
 # Install additional necessary packages
 pkg install zsh bc python wget gh python-pip micro openssh zip curl figlet logo-ls lsd -y > /dev/null 2>> "$ERROR_LOG" &
